@@ -1,0 +1,61 @@
+{
+  "id": "3055",
+  "type": "reality_pack",
+  "category": "future",
+  "display_name": "3055 Mode",
+  "version": "0.1.0",
+  "description": "Future-city interpretation using luminous transit grids, glass/carbon surfaces, holographic signs, and sky-layer effects.",
+  "surface_rules": {
+    "road": {
+      "material": "materials/glowing_transit_grid.png",
+      "overlay_opacity": 0.80,
+      "height_offset": 0.01,
+      "effect": "emissive_pulse"
+    },
+    "ground": {
+      "material": "materials/composite_floor.png",
+      "overlay_opacity": 0.70,
+      "height_offset": 0.01
+    },
+    "wall": {
+      "material": "materials/glass_carbon_panel.png",
+      "overlay_opacity": 0.75,
+      "height_offset": 0.02
+    },
+    "building": {
+      "material": "materials/megastructure_skin.png",
+      "overlay_opacity": 0.70,
+      "height_offset": 0.02
+    },
+    "sign": {
+      "replacement_prefab": "prefabs/hologram_sign.prefab",
+      "overlay_opacity": 1.0
+    },
+    "vehicle": {
+      "replacement_prefab": "prefabs/autonomous_pod_proxy.prefab",
+      "overlay_opacity": 0.80
+    },
+    "sky": {
+      "replacement_prefab": "prefabs/orbital_lane_overlay.prefab",
+      "overlay_opacity": 0.45
+    }
+  },
+  "props": [
+    {
+      "id": "drone_light",
+      "prefab": "prefabs/drone_light.prefab",
+      "spawn_on": ["sky", "building"],
+      "max_count": 5
+    }
+  ],
+  "lighting": {
+    "temperature": "cool",
+    "intensity_multiplier": 1.15,
+    "fog": "clean_haze"
+  },
+  "audio": {
+    "ambient_loop": "audio/future_city_loop.mp3",
+    "volume": 0.35
+  },
+  "classification": "future_concept"
+}
