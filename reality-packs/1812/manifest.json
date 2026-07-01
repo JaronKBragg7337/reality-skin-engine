@@ -1,0 +1,56 @@
+{
+  "id": "1812",
+  "type": "reality_pack",
+  "category": "history",
+  "display_name": "1812 Mode",
+  "version": "0.1.0",
+  "description": "Older-world town and street interpretation using dirt, brick, wood, lanterns, smoke, and muted signs.",
+  "surface_rules": {
+    "road": {
+      "material": "materials/dirt_road.png",
+      "overlay_opacity": 0.85,
+      "height_offset": 0.01
+    },
+    "ground": {
+      "material": "materials/mud_grass.png",
+      "overlay_opacity": 0.70,
+      "height_offset": 0.01
+    },
+    "wall": {
+      "material": "materials/old_brick.png",
+      "overlay_opacity": 0.75,
+      "height_offset": 0.02
+    },
+    "building": {
+      "material": "materials/aged_plaster_or_brick.png",
+      "overlay_opacity": 0.70,
+      "height_offset": 0.02
+    },
+    "sign": {
+      "replacement_prefab": "prefabs/wood_sign.prefab",
+      "overlay_opacity": 1.0
+    },
+    "vehicle": {
+      "replacement_prefab": "prefabs/wagon_proxy.prefab",
+      "overlay_opacity": 0.80
+    }
+  },
+  "props": [
+    {
+      "id": "lantern",
+      "prefab": "prefabs/lantern.prefab",
+      "spawn_on": ["wall", "sign"],
+      "max_count": 3
+    }
+  ],
+  "lighting": {
+    "temperature": "warm",
+    "intensity_multiplier": 0.85,
+    "fog": "light_smoke"
+  },
+  "audio": {
+    "ambient_loop": "audio/ambient_town_loop.mp3",
+    "volume": 0.35
+  },
+  "classification": "speculative_reconstruction"
+}
